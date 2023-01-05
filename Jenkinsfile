@@ -3,10 +3,7 @@ pipeline {
   stages{ 
     stage('build'){
       steps{
-        agent{
-          docker { image 'python:3' }
-        }
-        echo 'build'
+        bat 'docker build -t docker-image-jenkins .'
       }
     }
     stage('test'){
