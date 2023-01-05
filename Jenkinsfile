@@ -8,7 +8,8 @@ pipeline {
     }
     stage('test'){
       steps{
-        echo 'test'
+        sh 'pip install requirements.txt'
+        sh 'python app.py'
       }
     }
     stage('deploy'){
