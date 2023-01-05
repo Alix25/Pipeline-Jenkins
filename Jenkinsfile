@@ -11,8 +11,8 @@ pipeline {
     }
     stage('test'){
       steps{
-        sh 'pip install -r requirements.txt'
-        sh 'python app.py'
+        bat 'pip install -r requirements.txt'
+        bat 'python app.py'
       }
     }
     stage('deploy'){
