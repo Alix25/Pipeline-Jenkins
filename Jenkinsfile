@@ -9,7 +9,7 @@ pipeline {
     stage('test'){
       steps{
         sh 'pip install requirements.txt'
-        sh 'python app.py'
+        sh 'python -m unittest discover'
       }
     }
     stage('deploy'){
