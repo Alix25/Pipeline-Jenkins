@@ -9,7 +9,7 @@ pipeline {
     stage('test'){
       steps{
         sh 'pip install -r requirements.txt'
-        sh 'FLASK_APP=app.py flask run'
+        sh 'python app.py'
       }
     }
     stage('deploy'){
